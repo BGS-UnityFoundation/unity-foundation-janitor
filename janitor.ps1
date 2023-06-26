@@ -6,6 +6,7 @@ if ($command -eq "create") {
     $Project_name = $args[2]
 
     & $PSScriptRoot/Tools/create-unityfoundation-project.ps1 $PROJECT_PATH $Project_name
+    & $PSScriptRoot/Tools/copy-auxiliaries-files.ps1 $PROJECT_PATH
     & $PSScriptRoot/Tools/create-unityfoundation-folder-tree.ps1 $PROJECT_PATH $Project_name
     & $PSScriptRoot/Tools/update-manifest.ps1 $PROJECT_PATH
 

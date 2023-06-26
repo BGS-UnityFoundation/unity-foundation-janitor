@@ -8,10 +8,6 @@ $Resource_folder = "$PSScriptRoot/../Resources"
 $Project_fullname = "UnityFoundation.$Project_name"
 $Assets_folder = "$PROJECT_PATH/Assets"
 
-Copy-Item "$Resource_folder/.gitignore" -Destination $Assets_folder | Out-Null
-Copy-Item "$Resource_folder/.vsconfig" -Destination $Assets_folder | Out-Null
-Copy-Item "$Resource_folder/.editorconfig" -Destination $Assets_folder | Out-Null
-
 $Code_path = "$Assets_folder/$Project_fullname"
 New-Item -ItemType Directory "$Code_path" -Force | Out-Null
 
