@@ -3,14 +3,20 @@
 $PROJECT_PATH = $args[0]
 $Project_name = $args[1]
 
+$Resource_folder = "$PSScriptRoot/../Resources"
+
 $Project_fullname = "UnityFoundation.$Project_name"
 $Assets_folder = "$PROJECT_PATH/Assets"
+
+Copy-Item "$Resource_folder/.gitignore" -Destination $Assets_folder | Out-Null
+Copy-Item "$Resource_folder/.vsconfig" -Destination $Assets_folder | Out-Null
+Copy-Item "$Resource_folder/.editorconfig" -Destination $Assets_folder | Out-Null
 
 $Code_path = "$Assets_folder/$Project_fullname"
 New-Item -ItemType Directory "$Code_path" -Force | Out-Null
 
 $package_filename = "package.json"
-$package = Get-Content "$PSScriptRoot/../Resources/$package_filename" | ConvertFrom-Json
+$package = Get-Content "$Resource_folder/$package_filename" | ConvertFrom-Json
 $package.name = "coop.unityfoundation.$Project_name".ToLower()
 $package.displayName = "UnityFoundation $Project_name"
 ConvertTo-Json $package -Depth 100 | Format-Json | Set-Content "$Code_path/$package_filename"
