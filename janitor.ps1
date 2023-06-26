@@ -1,0 +1,1 @@
+Copy-Item "./Resources/project.json" -Destination "." | Out-Null
