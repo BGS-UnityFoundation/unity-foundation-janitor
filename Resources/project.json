@@ -1,6 +1,10 @@
 {
-    "project_name": "",
-    "build_on": "",
-    "deploy_to": "",
-    "unity": ""
+    "name": "",
+    "version": "0.0.1",
+    "package_file": "./Assets/UnityFoundation.Cursors/package.json",
+    "unity_package": {
+        "name": "",
+        "path": "Builds",
+        "export_folders": []
+    }
 }
