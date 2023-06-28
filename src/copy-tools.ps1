@@ -4,4 +4,4 @@ $Resource_folder = "$PSScriptRoot/../Resources"
 
 Copy-Item "$Resource_folder/Tools" -Recurse -Destination $PROJECT_PATH -Force
 
-Write-Host "DiretÃ³rio de ferramentas copiado para o mÃ³dulo."
+Write-Host "Diretório de ferramentas copiado para o módulo."
