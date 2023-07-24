@@ -6,3 +6,9 @@ Esse é um projeto especial que implementar ferramentas auxiliares para o desenv
 ```powershell
 $ .\janitor.ps1 create <project_path> <project_name>
 ```
+
+exemplo
+
+```powershell
+$ .\janitor.ps1 create ./unity-foundation-modulexyz ModuleXYZ
+```
